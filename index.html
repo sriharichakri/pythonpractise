@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PyPath · Python Fundamentals Roadmap</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="side">
+    <div class="brand">🐍 PyPath</div>
+    <div class="ov"><div class="ring" id="ring"><b id="ringText">0%</b></div><div><b id="overallText"></b><small>Learning path</small></div></div>
+    <nav id="path"></nav>
+    <div class="sctl">
+      <select id="mode" title="How problems open"><option value="split">Open: side window</option><option value="tab">Open: new tab</option><option value="frame">Open: in-page (experimental)</option></select>
+      <button id="reset">Reset progress</button>
+    </div>
+  </aside>
+  <main>
+    <section class="hero">
+      <small id="builds"></small><h1 id="title"></h1><p id="desc"></p>
+      <div class="bar"><span id="stageBar"></span></div>
+      <div class="hrow"><small id="stageText"></small><button id="next" class="cta">Continue →</button></div>
+    </section>
+    <section class="filters">
+      <input id="search" type="search" placeholder="Search problems…">
+      <select id="fDiff"><option value="">All levels</option><option value="E">Easy</option><option value="M">Medium</option><option value="H">Hard</option></select>
+      <select id="fStat"><option value="">All status</option><option value="todo">To do</option><option value="done">Done</option></select>
+      <div id="chips" class="chips"></div>
+    </section>
+    <div id="sections"></div>
+  </main>
+</div>
+<aside id="viewer" hidden>
+  <div class="vbar"><b id="vtitle"></b><a id="vopen" target="_blank" rel="noopener">Open in tab ↗</a><button id="vclose" aria-label="Close">✕</button></div>
+  <p class="vnote">Page blank? LeetCode/HackerRank block embedding, so use “Open in tab”.</p>
+  <iframe id="vframe" title="Problem" referrerpolicy="no-referrer"></iframe>
+</aside>
+<script src="data.js"></script>
+<script src="data2.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
